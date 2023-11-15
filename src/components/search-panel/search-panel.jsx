@@ -2,11 +2,8 @@ import { Component } from 'react';
 import './search-panel.css';
 
 export class SearchPanel extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            term: ''
-        }
+    state = {
+        term: ''
     }
 
     onUpdateSearchLocal = (e) => {

@@ -8,19 +8,16 @@ import { EmpoloyeesAddForm } from '../employees-add-form/empoyees-add-form';
 import './app.css';
 
 export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state= {
-            data: [
-                {name: 'John Smith', salary: 800, increase: false, like: false,  id: 1},
-                {name: 'Ann Murahovskaya', salary: 3000, increase: false, like: false, id: 2},
-                {name: 'Kirill Murahovsky', salary: 5000, increase: false, like: true, id: 3}
-            ],
-            term: '',
-            filter: 'all'
-        }
-        this.maxId = 4;
+    state= {
+        data: [
+            {name: 'John Smith', salary: 800, increase: false, like: false,  id: 1},
+            {name: 'Ann Murahovskaya', salary: 3000, increase: false, like: false, id: 2},
+            {name: 'Kirill Murahovsky', salary: 5000, increase: false, like: true, id: 3}
+        ],
+        term: '',
+        filter: 'all'
     }
+    maxId = 4;
 
     deleteItem = (id) => {
         this.setState(({data}) => {
